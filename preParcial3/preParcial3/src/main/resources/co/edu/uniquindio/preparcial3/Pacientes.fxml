@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="797.0" prefWidth="743.0"
+            xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="co.edu.uniquindio.preparcial3.Controller.PacientesController"
+            style="-fx-background-color: #fff8e1; -fx-font-family: 'Segoe UI'; -fx-text-fill: #4e342e; -fx-font-size: 13px;">
+
+    <children>
+        <Label layoutX="36.0" layoutY="24.0" text="Nombre" style="-fx-font-weight: bold;"/>
+        <Label layoutX="27.0" layoutY="68.0" text="Documento" style="-fx-font-weight: bold;"/>
+        <Label layoutX="35.0" layoutY="114.0" text="Teléfono" style="-fx-font-weight: bold;"/>
+        <Label layoutX="39.0" layoutY="153.0" text="Correo" style="-fx-font-weight: bold;"/>
+
+        <TextField fx:id="txtNombre" layoutX="114.0" layoutY="20.0" promptText="Ingrese su nombre:"
+                   style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #ffcc80; -fx-background-color: #fff3e0;"/>
+        <TextField fx:id="txtDocumento" layoutX="114.0" layoutY="64.0" promptText="Ingrese su documento:"
+                   style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #ffcc80; -fx-background-color: #fff3e0;"/>
+        <TextField fx:id="txtTelefono" layoutX="114.0" layoutY="110.0" promptText="Ingrese su teléfono:"
+                   style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #ffcc80; -fx-background-color: #fff3e0;"/>
+        <TextField fx:id="txtCorreo" layoutX="115.0" layoutY="154.0" promptText="Ingrese su correo:"
+                   style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #ffcc80; -fx-background-color: #fff3e0;"/>
+
+        <Button fx:id="btnGuardar" layoutX="324.0" layoutY="42.0" text="Guardar"
+                style="-fx-background-color: #f57c00; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8;" onAction="#guardar"/>
+        <Button fx:id="btnActualizar" layoutX="441.0" layoutY="42.0" text="Actualizar"
+                style="-fx-background-color: #f9a825; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8;" onAction="#actualizar"/>
+        <Button fx:id="btnEliminar" layoutX="571.0" layoutY="42.0" text="Eliminar"
+                style="-fx-background-color: #e53935; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8;" onAction="#eliminar"/>
+
+        <TableView fx:id="tableCliente" layoutX="8.0" layoutY="315.0" prefHeight="426.0" prefWidth="713.0"
+                   style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #ffcc80; -fx-background-color: #fff3e0;">
+            <columns>
+                <TableColumn fx:id="colNombre" text="Nombre" />
+                <TableColumn fx:id="colDocumento" text="Documento" />
+                <TableColumn fx:id="colTelefono" text="Teléfono" />
+                <TableColumn fx:id="colCorreo" text="Correo" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

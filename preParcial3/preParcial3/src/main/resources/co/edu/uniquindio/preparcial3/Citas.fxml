@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="797.0" prefWidth="743.0" style="-fx-background-color: #fff8e1; -fx-font-family: 'Segoe UI'; -fx-text-fill: #4e342e; -fx-font-size: 13px;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.preparcial3.Controller.CitasController">
+
+    <children>
+        <Label layoutX="43.0" layoutY="55.0" style="-fx-font-weight: bold;" text="Fecha" />
+        <Label layoutX="45.0" layoutY="103.0" style="-fx-font-weight: bold;" text="Paciente" />
+        <Label layoutX="45.0" layoutY="147.0" style="-fx-font-weight: bold;" text="Doctor" />
+        <Label layoutX="45.0" layoutY="191.0" style="-fx-font-weight: bold;" text="Precio" />
+
+        <TextField fx:id="txtFecha" layoutX="116.0" layoutY="51.0" style="-fx-background-radius: 6; -fx-border-color: #ffcc80; -fx-border-radius: 6; -fx-background-color: #fff3e0;" />
+        <ComboBox fx:id="cBCliente" layoutX="115.0" layoutY="99.0" prefWidth="150.0" promptText="Ingrese el cliente" style="-fx-background-radius: 6; -fx-border-color: #ffcc80; -fx-border-radius: 6; -fx-background-color: #fff3e0;" />
+        <ComboBox fx:id="cBProducto" layoutX="115.0" layoutY="143.0" prefWidth="150.0" promptText="Ingrese el producto" style="-fx-background-radius: 6; -fx-border-color: #ffcc80; -fx-border-radius: 6; -fx-background-color: #fff3e0;" />
+        <TextField fx:id="txtCantidad" layoutX="116.0" layoutY="187.0" promptText="Ingrese la precio:" style="-fx-background-radius: 6; -fx-border-color: #ffcc80; -fx-border-radius: 6; -fx-background-color: #fff3e0;" />
+
+        <Button fx:id="btnGuardar" layoutX="448.0" layoutY="51.0" onAction="#guardar" style="-fx-background-color: #f57c00; -fx-text-fill: white; -fx-background-radius: 8; -fx-font-weight: bold;" text="Guardar" />
+
+        <TableView fx:id="tableVenta" layoutX="6.0" layoutY="269.0" prefHeight="426.0" prefWidth="732.0" style="-fx-background-color: #fff3e0; -fx-border-radius: 8; -fx-border-color: #ffcc80; -fx-font-family: 'Segoe UI';">
+            <columns>
+                <TableColumn fx:id="colFecha" prefWidth="103.0" text="Fecha" />
+                <TableColumn fx:id="colCliente" prefWidth="175.0" text="Paciente" />
+                <TableColumn fx:id="colProducto" prefWidth="216.0" text="Doctor" />
+                <TableColumn fx:id="colCantidad" minWidth="0.0" prefWidth="236.0" text="Precio" />
+                <TableColumn fx:id="colPrecio" minWidth="0.0" prefWidth="0.0" text="Precio" />
+                <TableColumn fx:id="colSubtotal" minWidth="0.0" prefWidth="0.0" text="Subtotal" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
